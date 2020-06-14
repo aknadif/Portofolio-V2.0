@@ -8,6 +8,10 @@ body {
     margin-bottom: 75px;
 }
 
+.navbar {
+    z-index: 1;
+}
+
 .jumbotron {
     height: 720px;
 }
