@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
     margin-top: 30px;
     margin-bottom: 75px;
 }
@@ -13,12 +13,34 @@ body {
 }
 
 .jumbotron {
-    height: 720px;
+    height: 600px;
+    background-image: url("../img/jumbotron-bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -40px;
+    overflow: hidden;
+}
+
+.jumbotron h1,
+.jumbotron p {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .jumbotron img {
+    margin-top: 70px;
+    height: 170px;
     width: 150px;
     border: 3px solid #666666;
+}
+
+.jumbotron h1,
+.jumbotron p {
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.jumbotron h1 {
+    font-size: 54px;
 }
 
 hr {
@@ -28,6 +50,23 @@ hr {
 
 section {
     min-height: 600px;
+}
+
+.kanan,
+.kiri {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1s;
+}
+
+.kanan {
+    transform: translate(50px, 0);
+}
+
+.kiri.muncul,
+.kanan.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .portofolio {
