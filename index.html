@@ -8,77 +8,65 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="Asset/css/fontawesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Asset/css/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="Asset/css/loader.css">
     <link rel="stylesheet" href="Asset/css/style.css" />
     <link rel="stylesheet" href="Asset/css/lightbox/lightbox.min.css" />
+    <title>Ak Nadhif</title>
 </head>
 
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#home">AK Nadhif</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portofolio">Portofolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-            </ul>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top">
+        <div class="kon">
+            <div style="cursor: pointer;" onclick="openNav()">
+                <div class="l1"></div>
+                <div class="l2"></div>
+                <div class="l3"></div>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <div onclick="closeNav()">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="kontener">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#portofolio">Portofoio</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
     </nav>
+
     <!-- Akhir Navbar -->
 
-    <!-- Loader -->
-    <div class="loader-wrapper">
-        <div class="lds-roller">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
-    <!-- Akhir Loader -->
+
 
 
     <!-- Jumbotron -->
-    <div class="jumbotron text-center">
-        <div data-paroller-factor="0.3" data-paroller-factor-xs="0.55" data-paroller-type="foreground" data-paroller-direction="vertical">
-            <img src="Asset/img/foto.jpg" class="rounded-circle" alt="" />
+    <section class="jumbotron">
+        <div class="container">
+            <div data-paroller-factor="-0.375" data-paroller-factor-xs="-0.45" data-paroller-type="foreground" data-paroller-direction="vertical">
+                <h1>Hi.</h1>
+            </div>
+            <div data-paroller-factor="-0.5" data-paroller-factor-xs="-0.35" data-paroller-type="foreground" data-paroller-direction="vertical">
+                <p>Wellcome to my website</p>
+            </div>
+            <div class="arrow bounce">
+                <a class="fa fa-arrow-down fa-2x" href="#about"></a>
+            </div>
         </div>
-        <div data-paroller-factor="-0.375" data-paroller-factor-xs="-0.45" data-paroller-type="foreground" data-paroller-direction="vertical">
-            <h1>AK Nadhif</h1>
-        </div>
-        <div data-paroller-factor="-0.375" data-paroller-factor-xs="-0.35" data-paroller-type="foreground" data-paroller-direction="vertical">
-            <p>Mahasiswa</p>
-        </div>
-
-
-    </div>
+    </section>
     <!-- Akhir Jumbotron -->
 
     <!-- About -->
-    <section class="about text-center" id="about">
+    <section class="about" id="about">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-sm-12">
                     <h2>About</h2>
                     <hr />
@@ -86,20 +74,28 @@
             </div>
             <div class="row">
                 <div class="col-sm-6">
-                    <p class="kiri">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit illum, expedita aliquid vel officiis ab placeat ipsum voluptatem at impedit beatae tenetur suscipit laudantium ut voluptatum culpa porro quod enim molestias quasi exercitationem? Earum eaque,
-                        molestias aperiam in qui molestiae vitae sit sequi sint dolor magni dolores iusto dignissimos, repellendus a optio quisquam, ab inventore? Ducimus suscipit molestiae aliquam, unde adipisci voluptatibus? Expedita, officiis sint
-                        possimus beatae blanditiis nemo neque debitis eligendi harum repellendus, officia ratione consectetur, soluta quae modi? Labore facere ad quisquam laborum quia, vitae id maiores exercitationem. Molestiae sit nulla, quidem fugiat
-                        doloribus placeat nemo consectetur dolorem?
-                    </p>
+                    <div class="div1">
+
+                        <img src="Asset/img/foto.jpg" alt="">
+                        <h1>AK Nadhif</h1>
+                        <p>Mahasiswa</p>
+
+                    </div>
                 </div>
                 <div class="col-sm-6">
+                    <h1 class="text-center">Career Goal</h1>
                     <p class="kanan">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatum tempore accusamus sequi ex eum? Sunt incidunt perspiciatis porro dolores ipsa ab quasi magnam autem velit sed saepe officia temporibus, possimus facilis, deleniti fuga dicta.
-                        Repellendus provident atque odit nesciunt soluta et, dolores cum, exercitationem autem, culpa libero. Ut omnis earum nisi necessitatibus quis rem quo repudiandae ad ab commodi, doloribus voluptas illum praesentium vel natus sit
-                        dignissimos dolor veniam numquam deleniti corporis nihil obcaecati! Eius ipsum accusamus non architecto saepe! Recusandae pariatur corporis dolore provident possimus consectetur consequatur totam, quisquam sequi architecto sapiente
-                        sed unde fuga quibusdam! Ab, quam.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat explicabo voluptatem qui illo error amet consectetur possimus quos ratione, aut cupiditate nulla recusandae culpa minima distinctio reiciendis facilis vel illum eligendi hic! Quo vero saepe
+                        quia in cumque rem voluptas, quod cum totam, provident alias, necessitatibus voluptatibus deserunt tenetur facilis.
                     </p>
+                    <hr class="hrskat">
+                    <div class="bio">
+                        <p class="zask">Nama <span class="tab1">:&nbsp; Ahmad Khainur Nadhif</p>
+                        <p>No. <span class="tab2">:&nbsp;+6282242707949</p>
+                        <p>Alamat <span class="tab3">:&nbsp;Surakarta</p>
+                        <p>Email <span class="tab4">:&nbsp;aknadif58@gmail.com</p>
+                        <p>Website <span class="tab5">:&nbsp;aknadif.github.io</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -111,28 +107,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2>Portofilio</h2>
+                    <h2>Portofolio</h2>
                     <hr />
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="Asset/img/full/1.png" data-lightbox="image-1" data-title="CV" class="t1"><img src="Asset/img/thumbs/a.png" /></a>
+                    <a href="Asset/img/thumbs/1.jpg" data-lightbox="image-1" data-title="CV"><img class="img-thumbnail"
+                            src="Asset/img/thumbs/1.jpg" /></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="Asset/img/full/1.png" data-lightbox="image-1" data-title="My caption" class="t2"><img src="Asset/img/thumbs/a.png" /></a>
+                    <a href="Asset/img/thumbs/2.jpg" data-lightbox="image-1" data-title="My caption"><img
+                            class="img-thumbnail" src="Asset/img/thumbs/2.jpg" /></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="Asset/img/full/1.png" data-lightbox="image-1" data-title="My caption" class="t3"><img src="Asset/img/thumbs/a.png" /></a>
+                    <a href="Asset/img/thumbs/3.jpg" data-lightbox="image-1" data-title="My caption"><img
+                            class="img-thumbnail" src="Asset/img/thumbs/3.jpg" /></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="Asset/img/full/1.png" data-lightbox="image-1" data-title="My caption" class="t4"><img src="Asset/img/thumbs/a.png" /></a>
+                    <a href="Asset/img/thumbs/4.jpg" data-lightbox="image-1" data-title="My caption"><img
+                            class="img-thumbnail" src="Asset/img/thumbs/4.jpg" /></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="Asset/img/full/1.png" data-lightbox="image-1" data-title="My caption" class="t5"><img src="Asset/img/thumbs/a.png" /></a>
+                    <a href="Asset/img/thumbs/5.jpg" data-lightbox="image-1" data-title="My caption"><img
+                            class="img-thumbnail" src="Asset/img/thumbs/5.jpg" /></a>
                 </div>
                 <div class="col-sm-4">
-                    <a href="Asset/img/full/1.png" data-lightbox="image-1" data-title="My caption" class="t6"><img src="Asset/img/thumbs/a.png" /></a>
+                    <a href="Asset/img/thumbs/6.jpg" data-lightbox="image-1" data-title="My caption"><img
+                            class="img-thumbnail" src="Asset/img/thumbs/6.jpg" /></a>
                 </div>
             </div>
         </div>
@@ -165,7 +167,8 @@
                         </div>
                         <div class="form-group">
                             <label for="pesan" id="pesan">Pesan</label>
-                            <textarea type="text" id="pesan" class="form-control" rows="10" placeholder="Masukkan Pesan"></textarea>
+                            <textarea type="text" id="pesan" class="form-control" rows="10"
+                                placeholder="Masukkan Pesan"></textarea>
                         </div>
                         <button class="btn btn-primary" type="submit">Kirim Pesan</button>
                     </form>
@@ -175,6 +178,20 @@
     </section>
     <!-- Akhir Contact -->
 
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- Akhir Loader -->
     <!-- Footer -->
     <footer>
         <div class="container text-center">
@@ -182,15 +199,16 @@
                 <div class="col-sm-12">
                     <p>
                         &copy; Copyright 2020 | built by. Ahmad Khainur Nadhif.</a>
-                        <a href="https://www.instagram.com/aknadhif/?hl=en" class="fa fa-instagram" aria-hidden="true"></a>
+                        <a href="https://www.instagram.com/aknadhif/?hl=en" class="fa fa-instagram"
+                            aria-hidden="true"></a>
                         <a href="https://twitter.com/panggil_AK" class="fa fa-twitter" aria-hidden="true"></a>
                         <a href="https://www.facebook.com/ak.nadif" class="fa fa-facebook" aria-hidden="true"></a>
                         <a href="https://github.com/aknadif" class="fa fa-github" aria-hidden="true"></a>
                     </p>
                 </div>
             </div>
-        </div>
     </footer>
+
     <!-- Akhir Footer -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -198,7 +216,7 @@
     <script src="Asset/js/bootstrap/bootstrap.min.js"></script>
     <script src="Asset/js/lightbox/lightbox-plus-jquery.min.js"></script>
     <script src="Asset/js/paroller/jquery.paroller.min.js"></script>
-    <script src="Asset/js/paroller/script.js"></script>
+    <script src="Asset/js/parallax/parallax.min.js"></script>
     <script src="Asset/js/script.js"></script>
 </body>
 

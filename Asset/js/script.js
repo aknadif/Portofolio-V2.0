@@ -3,10 +3,38 @@ $(window).on("load", function() {
     $(".loader-wrapper").fadeOut("slow");
 });
 // End Loader
-// parallax
-$(window).on('load', function() {
-    $('.kiri').addClass('muncul')
-    $('.kanan').addClass('muncul')
+// Navbar
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+$(document).ready(function() {
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll < 650) {
+            $(".l1,.l2,.l3").css("background-color", "white");
+        }
+        if (scroll > 650) {
+            $(".l1,.l2,.l3").css("background-color", "black");
+        } else {
+            $(".black").css("background", "#333");
+        }
+    });
+});
+//About
+$(window).on("load", function() {
+    $(".jumbotron h1").addClass("muncul");
+    $(".jumbotron p").addClass("muncul");
+});
+$(window).on("load", function() {
+    $(".about h2").addClass("muncul");
+    $(".about hr").addClass("muncul");
+});
+$(window).on("load", function() {
+    $(".kanan").addClass("muncul");
 });
 // Select all links with hashes
 $('a[href*="#"]')
@@ -28,7 +56,7 @@ $('a[href*="#"]')
                 // Only prevent default if animation is actually gonna happen
                 event.preventDefault();
                 $("html, body").animate({
-                        scrollTop: target.offset().top - 55,
+                        scrollTop: target.offset().top,
                     },
                     1000,
                     function(x, t, b, c, d) {
@@ -38,3 +66,18 @@ $('a[href*="#"]')
             }
         }
     });
+
+$("[data-paroller-factor]").paroller();
+
+$(window).scroll(function() {
+    var wScroll = $(this).scrollTop();
+    // Portofolio
+    if (wScroll > $(".portofolio").offset().top - 300) {
+        $(".portofolio .img-thumbnail").each(function(i) {
+            setTimeout(function() {
+                $(".portofolio .img-thumbnail").eq(i).addClass("muncul");
+            }, 300 * (i + 1));
+        });
+        //
+    }
+});
