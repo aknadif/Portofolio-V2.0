@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     margin-bottom: 75px;
 }
 
@@ -74,6 +74,15 @@ body {
     margin-left: 50px;
 }
 
+.up {
+    opacity: 0;
+    transition: 2s;
+}
+
+.up.muncul {
+    opacity: 1;
+}
+
 
 /* Jumbotron */
 
@@ -85,7 +94,7 @@ body {
     background-position: 0 -40px;
     overflow: hidden;
     position: relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 .jumbotron h1 {
@@ -155,6 +164,10 @@ body {
     margin: 15% 0;
 }
 
+.arrow a {
+    margin-top: 100px;
+}
+
 .bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
@@ -191,7 +204,25 @@ section {
 
 .about {
     margin-top: -32px;
-    background-color: #818181;
+    background-image: url("../img/about-bg.jpg");
+    color: white;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.about .container {
+    z-index: 1;
+    position: relative;
+}
+
+.about::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    bottom: 0;
+    position: absolute;
 }
 
 .about .kanan,
@@ -199,21 +230,30 @@ section {
 .about hr {
     opacity: 0;
     transform: translate(-50px, 0);
-    transition: 1s;
+    transition: 2s;
 }
 
-.about .kanan {
-    transform: translate(50px, 0);
+.about .kanan,
+.about .hrskat {
+    transform: translate(100px, 0);
 }
 
 .about h2,
 .about hr {
-    transform: translate(0, -100px);
+    transition: 2s;
+    transform: translate(0, 0);
+}
+
+.about .div1 {
+    opacity: 0;
+    transform: translate(-100px, 0);
+    transition: 2s;
 }
 
 .about h2.muncul,
 .about hr.muncul,
-.kanan.muncul {
+.kanan.muncul,
+.about .div1.muncul {
     opacity: 1;
     transform: translate(0, 0);
 }
@@ -234,7 +274,7 @@ section {
 .about .div1 {
     height: 400px;
     width: 400px;
-    border: 5px solid rgba(248, 248, 248, .5);
+    border: 5px solid rgba(248, 248, 248, 0.5);
 }
 
 .about .div1 h1 {
@@ -296,8 +336,8 @@ section {
 /* Portofolio */
 
 .portofolio {
-    color: #212529;
-    background-image: url("../img/portofolio-bg.jpg");
+    color: white;
+    background-image: url("../img/about-bg.jpg");
     background-attachment: fixed;
 }
 
@@ -308,6 +348,18 @@ section {
 .portofolio h2 {
     font-size: 50px;
     margin-top: 20px;
+}
+
+.portofolio h2,
+.portofolio hr {
+    opacity: 0;
+    transition: 2s;
+}
+
+.portofolio h2.muncul,
+.portofolio hr.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .portofolio .img-thumbnail {
@@ -339,24 +391,44 @@ section {
 /* Contact */
 
 .contact {
-    min-height: 800px;
+    color: white;
+    background-image: url("../img/about-bg.jpg");
+    background-attachment: fixed;
+    min-height: 880px;
+    position: relative;
+}
+
+.contact .container {
+    z-index: 1;
+    position: relative;
+}
+
+.contact::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    bottom: 0;
+    position: absolute;
 }
 
 
 /* Footer */
 
 footer {
+    color: white;
     position: absolute;
     z-index: 1;
     bottom: 0;
     width: 100%;
     height: auto;
-    background-color: grey;
+    background-color: black;
     padding-top: 30px;
 }
 
 footer a {
-    color: black;
+    color: white;
     font-size: large;
 }
 
@@ -395,15 +467,14 @@ footer a {
     }
     .about {
         margin-top: -32px;
-        height: 952px;
+        height: 970px;
         background-color: #818181;
     }
     .about h2 {
         font-size: 70px;
     }
-    .arrow hr {
-        width: 25%;
-        margin-top: -10px;
+    .arrow a {
+        margin-top: -30px;
     }
     .about h1 {
         margin-top: 130px;
@@ -449,6 +520,9 @@ footer a {
         color: white;
     }
     .portofolio {
-        height: 952px;
+        height: 970px;
+    }
+    footer {
+        padding-top: 35px;
     }
 }

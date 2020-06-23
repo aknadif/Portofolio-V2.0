@@ -11,31 +11,45 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
+// Nav Auto Change Color
+// $(document).ready(function() {
+//     $(window).scroll(function() {
+//         var scroll = $(window).scrollTop();
+//         if (scroll < 650) {
+//             $(".l1,.l2,.l3").css("background-color", "white");
+//         }
+//         if (scroll > 650) {
+//             $(".l1,.l2,.l3").css("background-color", "black");
+//         } else {
+//             $(".black").css("background", "#333");
+//         }
+//     });
+// });
+// About
+$(window).on("load", function() {
+    $(".jumbotron h1, .jumbotron p").addClass("muncul");
+});
+// Control Effect
 $(document).ready(function() {
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        if (scroll < 650) {
-            $(".l1,.l2,.l3").css("background-color", "white");
+        if (scroll <= 850) {
+            setTimeout(function() {
+                $(".about h2 , .about hr, .kanan, .about .div1, .up").addClass("muncul");
+            }, 500);
         }
-        if (scroll > 650) {
-            $(".l1,.l2,.l3").css("background-color", "black");
-        } else {
-            $(".black").css("background", "#333");
+        if (scroll > 1200) {
+            setTimeout(function() {
+                $(".portofolio h2, .portofolio hr").addClass("muncul");
+            }, 200);
         }
     });
 });
-//About
-$(window).on("load", function() {
-    $(".jumbotron h1").addClass("muncul");
-    $(".jumbotron p").addClass("muncul");
-});
-$(window).on("load", function() {
-    $(".about h2").addClass("muncul");
-    $(".about hr").addClass("muncul");
-});
-$(window).on("load", function() {
-    $(".kanan").addClass("muncul");
-});
+
+// Nav
+
+
+
 // Select all links with hashes
 $('a[href*="#"]')
     // Remove links that don't actually link to anything
@@ -69,6 +83,7 @@ $('a[href*="#"]')
 
 $("[data-paroller-factor]").paroller();
 
+// Gallery Image
 $(window).scroll(function() {
     var wScroll = $(this).scrollTop();
     // Portofolio
@@ -81,3 +96,28 @@ $(window).scroll(function() {
         //
     }
 });
+
+//Button to Top
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction()
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 850 || document.documentElement.scrollTop > 850) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    $('#home').animate({
+        scrollTop: 0
+    }, 500);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
