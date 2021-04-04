@@ -1,6 +1,7 @@
 .jumbotron {
   padding-top: 6rem;
   background-color: #f1faee;
+  overflow: hidden;
 }
 #projects {
   background-color: #457b9d;
@@ -12,3 +13,113 @@ a {
 section {
   padding-top: 5rem;
 }
+/* Navbar Hide */
+.navbar {
+  transition: top 0.5s ease;
+  opacity: 0;
+}
+.navbar-on {
+  opacity: 1;
+}
+.navbar-hide {
+  top: -56px;
+}
+/* End Navbar Hide */
+/* Loader */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f1faee;
+}
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #34495e;
+  animation: loader 1s infinite ease-in-out;
+}
+
+@keyframes loader {
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+/* End Loader */
+/* Control Effect */
+.jumbotron .img {
+  opacity: 0;
+  transition: 1s;
+}
+.jumbotron .h1 {
+  opacity: 0;
+  transition: 0.5s;
+}
+.kiri {
+  opacity: 0;
+  transform: translate(-50px, 0);
+  transition: 2s;
+}
+.kanan {
+  opacity: 0;
+  transform: translate(50px, 0);
+  transition: 2s;
+}
+.tb {
+  opacity: 0;
+  transition: 1s;
+}
+#projects h2 {
+  opacity: 0;
+  transition: 1s;
+}
+#projects ul {
+  opacity: 0;
+  transition: 2s;
+}
+#contact h2 {
+  opacity: 0;
+  transition: 1s;
+  transform: translate(0, -50px);
+}
+#contact .row {
+  opacity: 0;
+  transition: 2s;
+}
+.kiri.muncul,
+.kanan.muncul,
+.tb.muncul,
+.jumbotron .img.muncul,
+.jumbotron .h1.muncul,
+#projects h2.muncul,
+#projects ul.muncul,
+#contact h2.muncul,
+#contact .row.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/* End Control Effect */
+
+/* Animate Gallery */
+.itembox {
+  opacity: 0;
+  transform: translate(0, -70px);
+  transition: 0.7s;
+}
+
+.itembox.muncul {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+/* End Animate Gallery */
